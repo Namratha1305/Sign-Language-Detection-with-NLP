@@ -2,7 +2,7 @@
 
 This project is an interactive application that uses computer vision and natural language processing to recognize sign language gestures in real-time and suggest the next likely words, creating a seamless communication tool. The app features a chat-style interface where users can compose messages by performing signs and selecting from AI-powered suggestions.
 
-🌟 Features
+**🌟 Features**
 Real-Time Sign Recognition: Recognizes a vocabulary of custom-trained signs directly from a webcam feed.
 
 Intelligent Word Suggestions: An LSTM-based NLP model predicts and suggests the next three most likely words to follow the recognized sign.
@@ -15,7 +15,7 @@ Dynamic UI: Features a smarter cooldown logic that resets instantly after a sign
 
 Chat Functionality: Includes a "Send" button, "Enter" key functionality to send messages, and a "Copy to Clipboard" button.
 
-💻 Technology Stack
+**💻 Technology Stack**
 Python: The core programming language.
 
 OpenCV: For real-time video capture and image processing.
@@ -30,7 +30,7 @@ NumPy: For numerical operations and data handling.
 
 Pillow (PIL): For integrating OpenCV video frames into the Tkinter GUI.
 
-🤔 How It Works
+**🤔 How It Works**
 The application's intelligence comes from two separate and specialized neural networks working in tandem:
 
 The Vision Model (The "Eyes" 👀): A recurrent neural network (LSTM) trained on sequences of 3D hand landmark data. Its only job is to watch the user's hand movements and classify them into a known sign (e.g., 'hello', 'i_am').
@@ -39,7 +39,7 @@ The Language Model (The "Brain" 🧠): A second LSTM network trained on a text c
 
 The main application acts as a coordinator, taking the word output from the Vision Model and feeding it as input to the Language Model to generate the final suggestions.
 
-🛠️ Setup and Installation
+**🛠️ Setup and Installation**
 Clone the repository:
 
 git clone https://github.com/your-username/your-repo-name.git
@@ -59,7 +59,7 @@ Install the required libraries:
 
 pip install -r requirements.txt
 
-▶️ How to Use
+**▶️ How to Use**
 Train the Models (First-time setup):
 
 To train the sign language model, run data_collector.py to gather your sign data, then run train_sign_model.py.
@@ -82,7 +82,7 @@ Hold your hand still or move it out of frame to reset the app for the next sign.
 
 Use the chat interface to build your message and click "Send" or press "Enter".
 
-📁 Project Structure
+**📁 Project Structure**
 .
 ├── 📄 chat_app.py             # Main application file with GUI
 ├── 📄 data_collector.py       # Script to collect sign language data
@@ -96,33 +96,6 @@ Use the chat interface to build your message and click "Send" or press "Enter".
 │   └── 📄 max_sequence_len.pkl
 └── 📄 README.md
 
-GitHub Repository Files
-Here is what you should put in your GitHub repository.
-
-✅ Files to Upload:
-chat_app.py: The main, final application. This is the most important file.
-
-data_collector.py: The script for collecting new sign data.
-
-train_sign_model.py: The script for training the sign recognition model.
-
-large_text_corpus.txt: The text file used to train your word suggester. It's good practice to include the data you used.
-
-requirements.txt: This is a crucial file that lists all the libraries your project needs. You can create it by running this command in your activated virtual environment:
-
-pip freeze > requirements.txt
-
-README.md: The file I just created for you.
-
-Your Trained Models:
-
-best_sign_model.keras
-
-word_predictor.keras
-
-word_tokenizer.pkl
-
-max_sequence_len.pkl
 
 Important: It's a good idea to put these model files into a separate folder (e.g., models/) to keep your repository clean.
  model).
