@@ -53,10 +53,12 @@ Create and activate a virtual environment:
 
 # For Windows
 python -m venv venv
+
 .\venv\Scripts\activate
 
 # For macOS / Linux
 python3 -m venv venv
+
 source venv/bin/activate
 
 Install the required libraries:
